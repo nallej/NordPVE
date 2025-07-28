@@ -67,7 +67,7 @@
   });
 </script>
 
-<link rel="stylesheet" href="/pve2/images/solarized.css">
+<link rel="stylesheet" href="/pve2/images/nord.css">
 
   </head>
   <body>
