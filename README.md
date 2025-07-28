@@ -1,24 +1,18 @@
-![Header](./images/header.png)
-(Generated with [PixelPoSH](https://github.com/dabeastnet/PixelPoSH))
-# SolarPVE
+# NordPVE
 
-A **[Solarized](https://ethanschoonover.com/solarized/)**-inspired light & dark CSS theme for Proxmox VE’s web UI.  
+A **[Nordic](https://www.nordtheme.com/)**-inspired light & dark CSS theme for Proxmox VE’s web UI.  
 Automatically switches to dark mode whenever Proxmox’s `theme-proxmox-dark.css` is loaded.
 
 ---
 
 ## Screenshots
-Lightmode:
-![Lightmode](./images/light.png)
 
-Darkmode:
-![Darkmode](./images/dark.png)
-
+- Coming soon
 
 ## Features
 
-- **Light** (Solarized Light) by default  
-- **Dark** (Solarized Dark) when Proxmox’s dark stylesheet is present  
+- **Light** (Nordic Polar Light) by default  
+- **Dark** (Nordic Polar) when Proxmox’s dark stylesheet is present  
 - No JS-framework dependencies—just vanilla CSS & a tiny inline script  
 - Easy to install and override via Proxmox’s `index.html.tpl`
 
@@ -27,11 +21,11 @@ Darkmode:
 ## Installation
 
 1. **Copy the CSS**  
-   Place `solarized.css` into your Proxmox server’s static‐assets folder.  
+   Place `nord.css` into your Proxmox server’s static‐assets folder.  
    By default this is:  
 ```
 
-/usr/share/pve-manager/images/solarized.css
+/usr/share/pve-manager/images/nord.css
 
 ```
 
@@ -57,7 +51,7 @@ and add *before* the existing `</head>` the following snippet:
   });
 </script>
 
-<link rel="stylesheet" href="/pve2/images/solarized.css">
+<link rel="stylesheet" href="/pve2/images/nord.css">
 ````
 (An example index.html.tpl ships in this repo, see the `Example` folder)
 
@@ -75,16 +69,16 @@ and add *before* the existing `</head>` the following snippet:
 ## How It Works
 
 * **Light mode**
-  All rules scoped under `body:not(.proxmox-theme-dark)` apply Solarized Light defaults.
+  All rules scoped under `body:not(.proxmox-theme-dark)` apply Nordic Polar Light defaults.
 
 * **Dark mode**
-  When Proxmox itself loads its `theme-proxmox-dark.css`, our small `<script>` adds `.proxmox-theme-dark` to `<body>` and you can write complementary CSS rules (e.g. under `body.proxmox-theme-dark`) for Solarized Dark.
+  When Proxmox itself loads its `theme-proxmox-dark.css`, our small `<script>` adds `.proxmox-theme-dark` to `<body>` and you can write complementary CSS rules (e.g. under `body.proxmox-theme-dark`) for Nordic Polar.
 
 ---
 
 ## Customization
 
-* Feel free to edit any of the `--baseXX` or `--accent` variables at the top of `solarized.css` to tweak colors.
+* Feel free to edit any of the `--baseXX` or `--accent` variables at the top of `nord.css` to tweak colors.
 * To add new dark-mode overrides, target:
 
   ```css
@@ -115,6 +109,6 @@ This repo is licensed under **CC BY-NC 4.0**.
 
 ---
 
-Enjoy a Solarized-themed Proxmox UI! 🚀
+Enjoy a Nordic-themed Proxmox UI! 🚀
 
 
