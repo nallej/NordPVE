@@ -22,14 +22,14 @@
    --------------------------------------------------------------------*/
 :root {
   /* Base */
-  --base03: #434c5e;
-  --base02: #4c566a;
-  --base01: #2e3440;
-  --base00: #4c566a;
-  --base0 : #e5e9f0;
-  --base1 : #C0C5CE;
+  --base03: #4c566a;
+  --base02: #434c5e;
+  --base01: #3b4252;
+  --base00: #2e3440;
+  --base0 : #eceff4;
+  --base1 : #e5e9f0;
   --base2 : #d8dee9;
-  --base3 : #e5e9f0;
+  --base3 : #C0C5CE;
   /* Accents */
   --yellow : #ebcb8b;
   --orange : #d08770;
@@ -45,8 +45,8 @@
    NORD POLAR DAY  (default – when the dark‑theme class is **absent**)
    --------------------------------------------------------------------*/
 body:not(.proxmox-theme-dark) {
-  background-color: var(--base3) !important;
-  color: var(--base00) !important;
+  background-color: var(--base0) !important;
+  color: var(--base03) !important;
   /* font smoothing */
   -webkit-font-smoothing: antialiased;
 }
@@ -58,7 +58,7 @@ body:not(.proxmox-theme-dark) .x-panel-body,
 body:not(.proxmox-theme-dark) .x-panel,
 body:not(.proxmox-theme-dark) .x-window-body,
 body:not(.proxmox-theme-dark) .x-grid-body {
-  background-color: var(--base3) !important;
+  background-color: var(--base1) !important;
   color: var(--base00) !important;
   border-color: var(--base1) !important;
 }
@@ -70,13 +70,13 @@ body:not(.proxmox-theme-dark) .x-panel-header,
 body:not(.proxmox-theme-dark) .x-header,
 body:not(.proxmox-theme-dark) .x-window-header{
   background-color: var(--base2) !important;
-  border-color: var(--base1) !important;
+  border-color: var(--base2) !important;
 }
 
 /*Text*/
 body:not(.proxmox-theme-dark) .x-panel-header-title,
 body:not(.proxmox-theme-dark) .x-window-header-title-default{
-    color: var(--base00) !important;
+    color: var(--blue) !important;
 }
 
 
@@ -84,14 +84,14 @@ body:not(.proxmox-theme-dark) .x-window-header-title-default{
 body:not(.proxmox-theme-dark) .x-tab-active,
 body:not(.proxmox-theme-dark) .x-tab-default, 
 body:not(.proxmox-theme-dark) .x-tab{
-  background-color: var(--base2) !important;
-  border-color: var(--base1) !important;
+  background-color: var(--base3) !important;
+  border-color: var(--base3) !important;
   color: var(--base00) !important;
 }
 
 body:not(.proxmox-theme-dark) .x-tab.x-tab-active.x-tab-default .x-tab-inner-default{
-  background-color: var(--base2) !important;
-  border-color: var(--base1) !important;
+  background-color: var(--base3) !important;
+  border-color: var(--base3) !important;
   color: var(--base00) !important;
 }
 
@@ -119,6 +119,7 @@ body:not(.proxmox-theme-dark) .x-btn-default-toolbar-small:hover {
 }
 
 /* Status colours */
+body:not(.proxmox-theme-dark) .x-progress-bar { background: var(--cyan) !important; }
 body:not(.proxmox-theme-dark) .x-progress.critical .x-progress-bar   { background: var(--red)    !important; }
 body:not(.proxmox-theme-dark) .x-progress.warning  .x-progress-bar   { background: var(--yellow) !important; }
 body:not(.proxmox-theme-dark) .x-tree-icon-custom.running:after       { color: var(--green)  !important; }
@@ -126,23 +127,32 @@ body:not(.proxmox-theme-dark) .x-tree-icon-custom.error:after         { color: v
 
 /* Tree / navigation */
 body:not(.proxmox-theme-dark) .x-treelist-pve-nav {
-  background-color: var(--base3) !important;
-}
-body:not(.proxmox-theme-dark) .x-treelist-item-icon,
-body:not(.proxmox-theme-dark) .x-treelist-item-text {
-  color: var(--base02) !important;
-}
-body:not(.proxmox-theme-dark) .x-treelist-row-over * {
-  color: var(--blue) !important;
+  background-color: var(--base2) !important;
 }
 
+body:not(.proxmox-theme-dark) .x-treelist-item-text,
+body:not(.proxmox-theme-dark) .x-treelist-item-icon {
+  color: var(--base01) !important;
+}
+
+body:not(.proxmox-theme-dark) .x-treelist-item-expander,
+body:not(.proxmox-theme-dark) .x-treelist-row-over *{
+  color: var(--base0) !important;
+}
+body:not(.proxmox-theme-dark) .x-treelist-item-selected *,
+body:not(.proxmox-theme-dark) .x-treelist-item:hover *{
+  background-color: var(--cyan) !important;
+}
 /* Tables */
 body:not(.proxmox-theme-dark) .x-grid-item {
-  background-color: var(--base3) !important;
-  color: var(--base00) !important;
+  background-color: var(--base0) !important;
+  color: var(--base02) !important;
 }
-body:not(.proxmox-theme-dark) .x-grid-item-over {
-  background-color: var(--base2) !important;
+body:not(.proxmox-theme-dark) .x-grid-item-over ,
+body:not(.proxmox-theme-dark) .x-grid-item-selected .x-grid-cell div,
+body:not(.proxmox-theme-dark) .x-grid-item-over .fa {
+  background-color: var(--cyan) !important;
+  color: var(--base0) !important;
 }
 
 /* Masks / dialogs */
