@@ -223,8 +223,8 @@ body.proxmox-theme-dark .x-title-icon-default,
 body.proxmox-theme-dark .x-btn-icon-el-default-small,
 body.proxmox-theme-dark .x-btn-inner-default-small,
 body.proxmox-theme-dark .x-tool-default {
-  background-color: var(--base02) !important;
-  border-color:     var(--base01) !important;
+  background-color: var(--base01) !important;
+  border-color:     var(--yellow) !important;
   color:            var(--base0)  !important;
 }
 body.proxmox-theme-dark .x-btn-default-toolbar-small:hover {
