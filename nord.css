@@ -1,8 +1,8 @@
 /* --------------------------------------------------------------------
-   Solarized theme for Proxmox VE Web UI – v1.0
-   Author: Dieter Beckers (Jul 2025)
-   Original gitrepo: https://github.com/dabeastnet/SolarPVE
-   Reference palette: https://ethanschoonover.com/solarized/
+   Nordic theme for Proxmox VE Web UI – v1.0
+   Author: vhsdream (Jul 2025)
+   Forked from: https://github.com/dabeastnet/SolarPVE
+   Reference palette: https://nordtheme.com
    --------------------------------------------------------------------
    HOW IT WORKS
    ------------
@@ -42,7 +42,7 @@
 }
 
 /* --------------------------------------------------------------------
-   SOLARIZED LIGHT  (default – when the dark‑theme class is **absent**)
+   NORD POLAR DAY  (default – when the dark‑theme class is **absent**)
    --------------------------------------------------------------------*/
 body:not(.proxmox-theme-dark) {
   background-color: var(--base3) !important;
@@ -159,7 +159,7 @@ body:not(.proxmox-theme-dark) ::selection {
 }
 
 /* --------------------------------------------------------------------
-   SOLARIZED DARK  (when the dark‑theme class is **present**)
+   NORDIC POLAR NIGHT  (when the dark‑theme class is **present**)
    --------------------------------------------------------------------*/
 body.proxmox-theme-dark {
   background-color: var(--base03) !important;
