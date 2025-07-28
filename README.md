@@ -11,8 +11,8 @@ Automatically switches to dark mode whenever Proxmox’s `theme-proxmox-dark.css
 
 ## Features
 
-- **Light** (Nordic Polar Light) by default  
-- **Dark** (Nordic Polar) when Proxmox’s dark stylesheet is present  
+- **Light** (Nordic Polar Day) by default  
+- **Dark** (Nordic Polar Night) when Proxmox’s dark stylesheet is present  
 - No JS-framework dependencies—just vanilla CSS & a tiny inline script  
 - Easy to install and override via Proxmox’s `index.html.tpl`
 
@@ -69,10 +69,10 @@ and add *before* the existing `</head>` the following snippet:
 ## How It Works
 
 * **Light mode**
-  All rules scoped under `body:not(.proxmox-theme-dark)` apply Nordic Polar Light defaults.
+  All rules scoped under `body:not(.proxmox-theme-dark)` apply Nordic Polar Day defaults.
 
 * **Dark mode**
-  When Proxmox itself loads its `theme-proxmox-dark.css`, our small `<script>` adds `.proxmox-theme-dark` to `<body>` and you can write complementary CSS rules (e.g. under `body.proxmox-theme-dark`) for Nordic Polar.
+  When Proxmox itself loads its `theme-proxmox-dark.css`, our small `<script>` adds `.proxmox-theme-dark` to `<body>` and you can write complementary CSS rules (e.g. under `body.proxmox-theme-dark`) for Nordic Polar Night.
 
 ---
 
