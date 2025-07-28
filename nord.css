@@ -9,8 +9,8 @@
    • Proxmox's light UI = body WITHOUT the class `proxmox-theme-dark`
    • Proxmox's dark UI  = body WITH    the class `proxmox-theme-dark`
    We therefore map:
-       - Light  → Solarized Light
-       - Dark   → Solarized Dark
+       - Light  → Nordic Polar Day
+       - Dark   → Nordic Polar Night
 
    • The file only contains *overrides* – it is safe to load AFTER the
      stock Proxmox CSS files.
@@ -22,23 +22,23 @@
    --------------------------------------------------------------------*/
 :root {
   /* Base */
-  --base03: #002b36;
-  --base02: #073642;
-  --base01: #586e75;
-  --base00: #657b83;
-  --base0 : #839496;
-  --base1 : #93a1a1;
-  --base2 : #eee8d5;
-  --base3 : #fdf6e3;
+  --base03: #2e3440;
+  --base02: #3b4252;
+  --base01: #C0C5CE;
+  --base00: #434c5e;
+  --base0 : #4c566a;
+  --base1 : #C0C5CE;
+  --base2 : #d8dee9;
+  --base3 : #e5e9f0;
   /* Accents */
-  --yellow : #b58900;
-  --orange : #cb4b16;
-  --red    : #dc322f;
-  --magenta: #d33682;
-  --violet : #6c71c4;
-  --blue   : #268bd2;
-  --cyan   : #2aa198;
-  --green  : #859900;
+  --yellow : #ebcb8b;
+  --orange : #d08770;
+  --red    : #bf616a;
+  --magenta: #b48ead;
+  --violet : #b48ead;
+  --blue   : #81a1c1;
+  --cyan   : #88c0d0;
+  --green  : #a3be8c;
 }
 
 /* --------------------------------------------------------------------
