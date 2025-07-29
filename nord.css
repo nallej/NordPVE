@@ -80,21 +80,18 @@ body:not(.proxmox-theme-dark) .x-window-header-title-default{
 }
 
 
-/*Tabs*/
-body:not(.proxmox-theme-dark) .x-tab-active,
-body:not(.proxmox-theme-dark) .x-tab-default, 
-body:not(.proxmox-theme-dark) .x-tab{
+/*Tabs*/ 
+body:not(.proxmox-theme-dark) .x-tab-default {
   background-color: var(--base3) !important;
   border-color: var(--base3) !important;
-  color: var(--base00) !important;
 }
-
-body:not(.proxmox-theme-dark) .x-tab.x-tab-active.x-tab-default .x-tab-inner-default{
-  background-color: var(--base3) !important;
-  border-color: var(--base3) !important;
-  color: var(--base00) !important;
+body:not(.proxmox-theme-dark) .x-tab-bar {
+  background-color: var(--base2) !important;
 }
-
+body:not(.proxmox-theme-dark) .x-tab-active {
+  background-color: var(--cyan) !important;
+  border-color: transparent !important;
+}
 
 
 /* Buttons and icons */
@@ -110,16 +107,19 @@ body:not(.proxmox-theme-dark) .x-btn-icon-el-default-small,
 body:not(.proxmox-theme-dark) .x-btn-inner-default-small,
 body:not(.proxmox-theme-dark) .x-tool-default {
   background-color: var(--base2) !important;
-  border-color: var(--base1) !important;
+  border-color: var(--base3) !important;
   color: var(--base00) !important;
 }
-body:not(.proxmox-theme-dark) .x-btn-default-toolbar-small:hover {
-  background-color: var(--base1) !important;
+body:not(.proxmox-theme-dark) .x-btn-wrap:hover,
+body:not(.proxmox-theme-dark) .x-btn-inner-default-toolbar-small:hover,
+body:not(.proxmox-theme-dark) .x-btn-inner-default-small:hover *,
+body:not(.proxmox-theme-dark) .x-btn-default-toolbar-small:hover * {
+  background-color: var(--base3) !important;
   color: var(--base03) !important;
 }
 
 /* Status colours */
-body:not(.proxmox-theme-dark) .x-progress-bar { background: var(--cyan) !important; }
+body:not(.proxmox-theme-dark) .x-progress-bar-default { background: var(--cyan) !important; }
 body:not(.proxmox-theme-dark) .x-progress.critical .x-progress-bar   { background: var(--red)    !important; }
 body:not(.proxmox-theme-dark) .x-progress.warning  .x-progress-bar   { background: var(--yellow) !important; }
 body:not(.proxmox-theme-dark) .x-tree-icon-custom.running:after       { color: var(--green)  !important; }
@@ -129,13 +129,11 @@ body:not(.proxmox-theme-dark) .x-tree-icon-custom.error:after         { color: v
 body:not(.proxmox-theme-dark) .x-treelist-pve-nav {
   background-color: var(--base2) !important;
 }
-
+body:not(.proxmox-theme-dark) .x-treelist-item-expander,
 body:not(.proxmox-theme-dark) .x-treelist-item-text,
 body:not(.proxmox-theme-dark) .x-treelist-item-icon {
   color: var(--base01) !important;
 }
-
-body:not(.proxmox-theme-dark) .x-treelist-item-expander,
 body:not(.proxmox-theme-dark) .x-treelist-row-over *{
   color: var(--base0) !important;
 }
@@ -144,15 +142,15 @@ body:not(.proxmox-theme-dark) .x-treelist-item:hover *{
   background-color: var(--cyan) !important;
 }
 /* Tables */
-body:not(.proxmox-theme-dark) .x-grid-item {
+bbody:not(.proxmox-theme-dark) .x-grid-item {
   background-color: var(--base0) !important;
-  color: var(--base02) !important;
+  color: var(--) !important;
 }
-body:not(.proxmox-theme-dark) .x-grid-item-over ,
-body:not(.proxmox-theme-dark) .x-grid-item-selected .x-grid-cell div,
+body:not(.proxmox-theme-dark) .x-grid-item-over,
+body:not(.proxmox-theme-dark) .x-grid-item-selected .x-grid-cell,
 body:not(.proxmox-theme-dark) .x-grid-item-over .fa {
   background-color: var(--cyan) !important;
-  color: var(--base0) !important;
+  color: var(--base00) !important;
 }
 
 /* Masks / dialogs */
