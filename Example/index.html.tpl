@@ -57,17 +57,24 @@
 
 <script>
   document.addEventListener('DOMContentLoaded', () => {
-    // Look for the Proxmox dark-theme stylesheet
+    const preferDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+    const pveTheme = document.cookie.split("; ")
+    .find((row) => row.startsWith("PVEThemeCookie="))
+    ?.split("=")[1];
     const darkLink = document.querySelector(
       'link[href*="theme-proxmox-dark.css"]'
     );
-    if (darkLink) {
+    if (darkLink && pveTheme === "proxmox-dark") {
       document.body.classList.add('proxmox-theme-dark');
+    } else if (pveTheme === "__default__" && preferDark) {
+      document.body.classList.add('proxmox-theme-dark');
+    } else {
+      document.body.classList.remove('proxmox-theme-dark');
     }
   });
 </script>
 
-<link rel="stylesheet" href="/pve2/images/nord.css">
+<link rel="stylesheet" href="/pve2/images/nord.css" />
 
   </head>
   <body>
