@@ -5,9 +5,15 @@ Automatically switches to dark mode whenever Proxmox’s `theme-proxmox-dark.css
 
 ---
 
-## Screenshots
+## Screenshots (still a WIP)
 
-- Coming soon
+**Polar Light**
+
+![polar-light](/images/polar_light.png)
+
+**Polar Dark**
+
+![polar-dark](/images/polar_dark.png)
 
 ## Features
 
