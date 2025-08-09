@@ -2,6 +2,7 @@
 
 A **[Nordic](https://www.nordtheme.com/)**-inspired light & dark CSS theme for Proxmox VE’s web UI.  
 Automatically switches to dark mode whenever Proxmox’s `theme-proxmox-dark.css` is loaded.
+
 Originally forked and adapted from [SolarPVE](https://github.com/dabeastnet/SolarPVE) - thanks to the creator.
 
 ---
