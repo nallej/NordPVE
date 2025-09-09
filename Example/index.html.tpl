@@ -61,25 +61,26 @@
     <form id="history-form" class="x-hidden">
     <input type="hidden" id="x-history-field"/>
     </form>
-<script>
-function setNordThemeMode() {
-    const defaultMode = window.matchMedia('(prefers-color-scheme: dark)').matches;
 
-    const selectedTheme = document.cookie.split("; ")
-    .find((row) => row.startsWith("PVEThemeCookie="))
-    ?.split("=")[1];
+    <script>
+	  function setNordThemeMode() {
+        const defaultMode = window.matchMedia('(prefers-color-scheme: dark)').matches;
+        const selectedTheme = document.cookie.split("; ")
+        .find((row) => row.startsWith("PVEThemeCookie="))
+        ?.split("=")[1];
 
-    if (defaultMode && selectedTheme !== "crisp") {
-        document.body.classList.add('proxmox-theme-dark');
-    } else if (selectedTheme !== "proxmox-dark") {
-        document.body.classList.remove('proxmox-theme-dark');
-    } else {
-        document.body.classList.add('proxmox-theme-dark');
+        if (defaultMode && selectedTheme !== "crisp") {
+            document.body.classList.add('proxmox-theme-dark');
+        } else if (selectedTheme !== "proxmox-dark") {
+            document.body.classList.remove('proxmox-theme-dark');
+        } else {
+            document.body.classList.add('proxmox-theme-dark');
+        }
     }
-}
-window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', setNordThemeMode);
-setNordThemeMode();
-</script>
-<link rel="stylesheet" href="/pve2/images/nord.css" />
+    window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', setNordThemeMode);
+    setNordThemeMode();
+    </script>
+    <link rel="stylesheet" href="/pve2/css/nord.css" />
+
   </body>
 </html>
