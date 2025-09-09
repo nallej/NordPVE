@@ -34,7 +34,7 @@ Originally forked and adapted from [SolarPVE](https://github.com/dabeastnet/Sola
 
 ```
 
-/usr/share/pve-manager/images/nord.css
+/usr/share/pve-manager/css/nord.css
 
 ```
 
@@ -50,32 +50,32 @@ Originally forked and adapted from [SolarPVE](https://github.com/dabeastnet/Sola
 and add _before_ the existing `</body>` (close to the bottom of the page) the following snippet:
 
 ```html
-<script>
-  function setNordThemeMode() {
-    const defaultMode = window.matchMedia(
-      "(prefers-color-scheme: dark)",
-    ).matches;
+    <script>
+      function setNordThemeMode() {
+        const defaultMode = window.matchMedia(
+          "(prefers-color-scheme: dark)",
+        ).matches;
 
-    const selectedTheme = document.cookie
-      .split("; ")
-      .find((row) => row.startsWith("PVEThemeCookie="))
-      ?.split("=")[1];
+        const selectedTheme = document.cookie
+          .split("; ")
+          .find((row) => row.startsWith("PVEThemeCookie="))
+          ?.split("=")[1];
 
-    if (defaultMode && selectedTheme !== "crisp") {
-      document.body.classList.add("proxmox-theme-dark");
-    } else if (selectedTheme !== "proxmox-dark") {
-      document.body.classList.remove("proxmox-theme-dark");
-    } else {
-      document.body.classList.add("proxmox-theme-dark");
-    }
-  }
-  window
-    .matchMedia("(prefers-color-scheme: dark)")
-    .addEventListener("change", setNordThemeMode);
-  setNordThemeMode();
-</script>
+        if (defaultMode && selectedTheme !== "crisp") {
+          document.body.classList.add("proxmox-theme-dark");
+        } else if (selectedTheme !== "proxmox-dark") {
+          document.body.classList.remove("proxmox-theme-dark");
+        } else {
+          document.body.classList.add("proxmox-theme-dark");
+        }
+      }
+      window
+        .matchMedia("(prefers-color-scheme: dark)")
+        .addEventListener("change", setNordThemeMode);
+      setNordThemeMode();
+    </script>
 
-<link rel="stylesheet" href="/pve2/images/nord.css" />
+    <link rel="stylesheet" href="/pve2/css/nord.css" />
 ```
 
 (An example index.html.tpl ships in this repo, see the `Example` folder)
